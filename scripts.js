@@ -232,7 +232,6 @@ function baseUpdate() {
             }
             
             particles[index].acc = v.VectorSubtract(particles[index].acc, new v.Vector2(0, fallspeed), 2)
-            console.log(fallspeed);
             
             simOBJ.calcDirDist(particles[index].pos.x, (simMaxX/5)+(dirx1), particles[index].pos.y, (simMaxY/2)+(diry1), particles[index].r, particles[index].r);
             particles[index].acc = v.VectorSubtract(particles[index].acc, new v.Vector2(((250)/(simOBJ.dist + 10)) * Math.cos(simOBJ.dir), ((250)/(simOBJ.dist + 10)) * Math.sin(simOBJ.dir)), 2)
