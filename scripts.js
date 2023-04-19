@@ -9,7 +9,7 @@ var dt = (1/50)/physicTime;
 
 var camera;
 
-var fallspeed = 9.80665/physicTime;
+var fallspeed = -9.80665/physicTime;
 
 var spawnPerspawner = 2000/8;
 
@@ -231,7 +231,7 @@ function baseUpdate() {
                 particles[index].acc = v.VectorSubtract(particles[index].acc, new v.Vector2(physicTime * (-5000/(5+((simOBJ.dist * simOBJ.dist)))) * Math.cos(simOBJ.dir), physicTime * (-5000/(5+((simOBJ.dist * simOBJ.dist)))) * Math.sin(simOBJ.dir)), 2)
             }
             
-            particles[index].acc = v.VectorSubtract(particles[index].acc, new v.Vector2(0, 0-fallspeed), 2)
+            particles[index].acc = v.VectorSubtract(particles[index].acc, new v.Vector2(0, fallspeed), 2)
             console.log(fallspeed);
             
             simOBJ.calcDirDist(particles[index].pos.x, (simMaxX/5)+(dirx1), particles[index].pos.y, (simMaxY/2)+(diry1), particles[index].r, particles[index].r);
