@@ -9,7 +9,7 @@ var dt = (1/50)/physicTime;
 
 var camera;
 
-var fallspeed = -9.80665/physicTime;
+var fallspeed = 9.80665/physicTime;
 
 var spawnPerspawner = 2000/8;
 
